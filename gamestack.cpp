@@ -1,6 +1,5 @@
 #include<iostream>
 #include<conio.h>
-#include<dos.h>
 #include<windows.h>
 #include<stdlib.h>
 #include<time.h>
@@ -204,19 +203,20 @@ int main()
         kosong(muatan);
         gotoxy(62,12);cout<<"1. Ambil muatan";
 		gotoxy(62,13);cout<<"2. Buang muatan";
-		gotoxy(62,14);cout<<"3. skip dan lihat isi kapal";
+		gotoxy(62,14);cout<<"3. Skip";
 		gotoxy(62,16);cout<<"                 ";
         gotoxy(62,16);cout<<" kapasitas 12/"<<muatan-1;
 		gotoxy(62,17);cout<<"pilihan anda : ";
 		gotoxy(62,18);cout<<" ";
 		gotoxy(62,18);cin>>pilih;
-        if(pilih==1) {
-		gotoxy(20,25);cout<<"                      ";
-		gotoxy(10,21);cout<<"                                 ";
-		push(check),barangAcak();
+        if(pilih==1) 
+		{
+			gotoxy(20,25);cout<<"                      ";
+			gotoxy(10,21);cout<<"                                 ";
+			push(check),barangAcak();
 		}
 		if(pilih==2) {pop(check);}
-		if(pilih==3) {cek(check),barangAcak();}
+		if(pilih==3) {barangAcak();}
 		cek(check);
         if (muatan==13){
             gotoxy(20,25);cout<<"                      ";
